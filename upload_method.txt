@@ -1,0 +1,29 @@
+✅ 下次再传文件（同一台电脑，同一仓库）
+1.把新文件放进仓库文件夹
+2.3 连击（复制-粘贴即可）
+bash
+git add .
+git commit -m "随便写点说明"
+git push
+3.完事！刷新网页就能看到。
+不需要再配 SSH、不再输账号密码，也再也不用 -u origin master。
+
+✅ 如果是“新建仓库”
+1.GitHub 网页点 New → 起个名 → Create repository
+2.本地打开 Git Bash，依次复制：
+bash
+cd 你的项目文件夹
+git init
+git add .
+git commit -m "first commit"
+git branch -M master
+git remote add origin git@github.com:你的用户名/仓库名.git
+git push -u origin master
+以后同样 git add . && git commit -m "xxx" && git push 就行。
+
+✅ 一句话总结
+配好 SSH 后，日常就 3 行命令：
+bash
+git add .
+git commit -m "描述"
+git push
